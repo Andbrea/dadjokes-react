@@ -2,7 +2,7 @@ import React, { useState }  from 'react';
 import './style.css';
 
 
-const Joke = ({id, userAvatar, userName, text, likes, dislikes }) => {
+const Joke = ({userAvatar, userName, text, likes, dislikes }) => {
 const [plusLike, setplusLike]= useState(0)
 const [disLike, setDisLike]= useState(0)
 
@@ -18,7 +18,7 @@ const [disLike, setDisLike]= useState(0)
       <div className="joke">
         <div className="joke__body">
           <div className="joke__user">
-            <img className="user-avatar" src={`https://raw.githubusercontent.com/Czechitas-podklady-WEB/dadjokes/main/users/${id}.png`}/>
+            <img className="user-avatar" src={userAvatar}/>
             <p className="user-name">{userName}</p>
           </div>
 

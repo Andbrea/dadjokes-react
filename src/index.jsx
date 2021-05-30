@@ -14,8 +14,6 @@ const App = () => {
     const joke = newJokes.find(joke = joke.id === id)
   }
 
-
-
 return (
 <>
   <div className="container">
@@ -23,9 +21,8 @@ return (
 {
         jokes.map( joke => <Joke
             key={joke.id}
-            id={joke.id}
-            avatar={joke.userAvatar}
-            name={joke.name}
+            userAvatar={joke.avatar}
+            userName={joke.name}
             text={joke.text}
             likes={joke.likes}
             dislikes={joke.dislikes}
